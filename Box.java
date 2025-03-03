@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 public class Thing{
+    
     String name;
 
     public Thing(String name){
@@ -7,6 +8,7 @@ public class Thing{
     }
 }
 public class Box {
+
     ArrayList<String> contents = new ArrayList<>();
 
     public void add(String truc){

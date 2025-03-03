@@ -3,14 +3,10 @@ import static org.junit.Assert.assertEquals;
 
 public class BoxTest{
     @Test 
-    public void BoxTestCreate(){
-        Box b = new Box();
-    }
-    /** on veut pouvoir mettre des trucs dedans */
-    @Test
-    public void BoxTestAdd(){
+    public void BoxTestAll(){
         Box b = new Box();
         b.add("truc1");
         b.add("truc2");
+        Thing chose = new Thing("Chose1");
     }
 }
