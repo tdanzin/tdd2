@@ -1,17 +1,13 @@
 import java.util.ArrayList;
-public class Thing{
-    
-    String name;
-
-    public Thing(String name){
-        this.name = name;
-    }
-}
 public class Box {
 
-    ArrayList<String> contents = new ArrayList<>();
+    private ArrayList<Thing> contents = new ArrayList<>();
 
-    public void add(String truc){
+    public void add(Thing truc){
         this.contents.add(truc);
+    }
+
+    public boolean contient(Thing truc){
+        return this.contents.contains(truc);
     }
 }
