@@ -10,5 +10,7 @@ public class BoxTest{
         b.add(truc1);
         b.add(truc2);
         Thing chose = new Thing("Chose1");
+        assert b.contient(truc2);
+        b.retirer(chose);
     }
 }
