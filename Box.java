@@ -2,6 +2,7 @@ import java.util.ArrayList;
 public class Box {
 
     private ArrayList<Thing> contents = new ArrayList<>();
+    private char status = '0';
 
     /**
      * Ajoute un truc à la boîte.
@@ -29,4 +30,31 @@ public class Box {
             this.contents.remove(truc);
         }
     }
+
+    public boolean isOpen(){
+        return this.status == 'O';
+    }
+
+    public void open(){
+        this.status = 'O';
+    }
+
+    public void close(){
+        this.status = 'F';
+    }
+
+    public String actionLook(){
+        String res = "";
+        if (this.isOpen()){
+            res = "La boîte contient: ";
+            for (Thing truc : contents){
+                res+= truc + ", ";
+            }
+        }
+        else{
+            res = "La boîte est fermée";
+        }
+        return res;
+    }
+
 }

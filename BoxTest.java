@@ -12,5 +12,12 @@ public class BoxTest{
         Thing chose = new Thing("Chose1");
         assert b.contient(truc2);
         b.retirer(chose);
+        assert b.isOpen();
+        b.close();
+        assert !(b.isOpen());
+        System.out.println(b.actionLook());
+        Thing chose2 = new Thing("Chose2", 3);
+        assert chose2.volume() == 3;
+        
     }
 }
